@@ -1,174 +1,116 @@
-# 💳 Credit Card Classification using Machine Learning
-
-## 📌 Project Overview
-
-This project focuses on building a **Machine Learning classification model for credit card data**. The main objective is to analyze customer-related credit card information and classify the data into the appropriate target categories.
-
-The project includes important Machine Learning steps such as **data preprocessing, exploratory data analysis, feature selection, model training, prediction, and model evaluation**.
-
-Four different Machine Learning classification algorithms were implemented and compared to identify the model that provides the best performance.
-
----
-
-## 🎯 Objectives
-
-* Analyze and understand the credit card dataset.
-* Perform data preprocessing and cleaning.
-* Handle missing or inconsistent data.
-* Explore relationships between different features.
-* Select suitable features for classification.
-* Train multiple Machine Learning classification algorithms.
-* Evaluate the performance of each model.
-* Compare the models and identify the best-performing algorithm.
-
----
-
-## 🛠️ Technologies Used
-
-* **Python**
-* **Jupyter Notebook**
-* **Pandas**
-* **NumPy**
-* **Matplotlib**
-* **Seaborn**
-* **Scikit-learn**
-
----
-
-## 🔄 Project Workflow
-
-```text
+💳 Credit Card Default Prediction Using Machine Learning
+📌 Project Overview
+This project focuses on predicting whether a credit card customer is likely to default on their payment using Machine Learning techniques.
+The project uses customer-related information such as credit limit, demographic details, payment history, and bill/payment amounts to build classification models.
+The main goal is to perform data preprocessing, exploratory data analysis (EDA), feature selection, model training, and model evaluation to identify the most suitable Machine Learning algorithm for credit card default prediction.
+🎯 Objectives
+To understand and preprocess the credit card dataset.
+To perform Exploratory Data Analysis (EDA).
+To handle categorical and numerical features.
+To identify and handle outliers and skewed data.
+To perform feature selection.
+To scale the required features.
+To build multiple Machine Learning classification models.
+To compare model performance using evaluation metrics.
+To identify the best-performing model.
+📊 Dataset
+The dataset contains customer information related to credit card usage and payment behaviour.
+Important Features
+ID – Customer identification number
+LIMIT_BAL – Amount of given credit
+SEX – Gender
+EDUCATION – Education level
+MARRIAGE – Marital status
+AGE – Customer age
+PAY_0, PAY_2, ... – Repayment status
+BILL_AMT1, BILL_AMT2, ... – Bill statement amounts
+PAY_AMT1, PAY_AMT2, ... – Previous payment amounts
+Target Variable – Credit card payment default status
+🔄 Project Workflow
 Dataset
    ↓
 Data Loading
    ↓
-Data Cleaning & Preprocessing
+Data Understanding
    ↓
-Exploratory Data Analysis
+Data Cleaning
+   ↓
+Exploratory Data Analysis (EDA)
+   ↓
+Encoding
+   ↓
+Outlier Analysis
+   ↓
+Skewness Analysis
    ↓
 Feature Selection
    ↓
+Feature Scaling
+   ↓
 Train-Test Split
    ↓
-Model Training
-   ↓
-Prediction
+Machine Learning Models
    ↓
 Model Evaluation
    ↓
-Algorithm Comparison
+Model Comparison
    ↓
 Best Model Selection
-```
-
----
-
-## 🤖 Machine Learning Algorithms
-
-Four classification algorithms were implemented in this project:
-
-### 1. Logistic Regression
-
-Used as a baseline classification algorithm to predict the target class based on the input features.
-
-### 2. Decision Tree Classifier
-
-A tree-based classification algorithm that makes decisions using feature-based conditions.
-
-### 3. Random Forest Classifier
-
-An ensemble learning algorithm that combines multiple decision trees to improve classification performance.
-
-### 4. [Your 4th Algorithm]
-
-Add the name of the fourth algorithm used in your project.
-
-**Example:**
-`K-Nearest Neighbors (KNN)` / `Support Vector Machine (SVM)` / `Naive Bayes`
-
----
-
-## 📊 Model Evaluation
-
-The trained models were evaluated using different classification metrics.
-
-### Evaluation Metrics
-
-* **Accuracy** – Measures the percentage of correctly classified observations.
-* **Precision** – Measures how many predicted positive cases were actually positive.
-* **Recall** – Measures how many actual positive cases were correctly identified.
-* **F1-Score** – Provides a balance between precision and recall.
-* **Confusion Matrix** – Shows the number of correct and incorrect predictions for each class.
-
-
-
-
-## 📈 Results
-
-The performance of all four classification algorithms was compared using the evaluation metrics.
-
-Based on the results, the model with the **highest overall performance** was selected as the preferred classification model for the dataset.
-
-The project demonstrates how different Machine Learning algorithms can produce different classification results and why model evaluation is important when selecting the most suitable algorithm.
-
----
-
-## 📂 Project Structure
-
-```text
-Credit-Card-Classification/
-│
-├── credit_card_classification.ipynb
-├── credit_card_dataset.csv
-├── README.md
-└── images/
-    ├── correlation_heatmap.png
-    ├── confusion_matrix.png
-    └── model_comparison.png
-```
-
----
-
-## 🚀 How to Run the Project
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/credit-card-classification.git
-```
-
-### 2. Open the Project
-
-Open the Jupyter Notebook:
-
-```bash
-jupyter notebook
-```
-
-### 3. Install Required Libraries
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
-```
-
-### 4. Run the Notebook
-
-Open the `.ipynb` file and execute the cells step by step.
-
----
-
-## 📚 Key Learning Outcomes
-
-Through this project, I gained practical knowledge of:
-
-* Data preprocessing
-* Exploratory Data Analysis (EDA)
-* Feature selection
-* Classification algorithms
-* Model training and prediction
-* Confusion matrix
-* Classification metrics
-* Model comparison
-* Machine Learning workflow using Python
-
-
+🔍 Exploratory Data Analysis
+The following steps were performed during EDA:
+df.info()
+df.describe()
+df.shape
+df.columns
+Missing value analysis
+Duplicate value analysis
+Correlation analysis
+Heatmap visualization
+Box plot analysis
+Outlier detection
+Skewness analysis
+These steps help to understand the structure, distribution, and relationships within the dataset.
+🛠️ Data Preprocessing
+The dataset was prepared for Machine Learning using the following techniques:
+Handling missing values
+Checking duplicate records
+Encoding categorical features
+Identifying outliers
+Handling skewed features
+Feature selection using SelectKBest
+Feature scaling using StandardScaler
+🤖 Machine Learning Algorithms
+The following classification algorithms were implemented:
+Logistic Regression
+Decision Tree Classifier
+Random Forest Classifier
+AdaBoost Classifier
+Gradient Boosting Classifier
+The models were trained using the training dataset and evaluated using the testing dataset.
+📈 Model Evaluation
+The models are compared using the following classification metrics:
+Metric
+Description
+Accuracy
+Measures the overall percentage of correct predictions
+Precision
+Measures how many predicted positive cases were actually positive
+Recall
+Measures how many actual positive cases were correctly identified
+F1-Score
+Provides a balance between precision and recall
+A model comparison table is created to identify the best-performing algorithm.
+💻 Technologies Used
+Python
+Jupyter Notebook
+NumPy
+Pandas
+Matplotlib
+Seaborn
+Scikit-learn
+Results
+Multiple Machine Learning classification algorithms were implemented and compared using Accuracy, Precision, Recall, and F1-Score.
+The model with the best overall evaluation performance can be selected as the final model for credit card default prediction.
+🎓 Conclusion
+This project demonstrates how Machine Learning can be applied to credit card customer data to predict payment default behaviour.
+The project covers the complete Machine Learning workflow, starting from data preprocessing and EDA to feature selection, scaling, model building, and performance evaluation.
